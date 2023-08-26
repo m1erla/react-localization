@@ -17,12 +17,12 @@ function App() {
   const messages = {
     "tr-TR" : {
       title: "Merhaba Dunya",
-      description: "3 yeni mesajiniz var"
+      description: "{count} yeni mesajiniz var"
     },
 
     "en-US": {
       title: "Hello World",
-      description: "You have 3 new messages"
+      description: "You have {count} new messages"
     }
     
 
@@ -33,7 +33,7 @@ function App() {
 
       <FormattedMessage  id='title' />
       <p>
-        <FormattedMessage id='description' />
+        <FormattedMessage id='description' values={{count: 6} }/>
 
       </p>
       <br/>
